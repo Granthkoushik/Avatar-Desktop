@@ -1,0 +1,35 @@
+# Dependencies
+/flutter/
+**/node_modules/
+**/target/
+**/dist/
+
+# System and logs
+*.log
+desktop_stdout.log
+desktop_stderr.log
+debug_pairing.log
+stdout.txt
+stderr.txt
+*.jpg
+*.png
+*.webp
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Database and security credentials
+*.db
+*.db-journal
+*.hash
+*.key
+*.pem
+discovery_keys.json
+avatar_secure.db
+avatar_auth.hash

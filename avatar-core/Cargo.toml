@@ -1,0 +1,39 @@
+[package]
+name = "avatar-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Database
+rusqlite = { version = "0.31.0", features = ["bundled", "chrono"] }
+
+# Cryptography & Security
+ring = "0.17.8"
+rcgen = "0.13.1"
+aes-gcm = "0.10.3"
+argon2 = "0.5.3"
+rand = "0.8.5"
+
+# Async & Networking
+tokio = { version = "1.38.0", features = ["full"] }
+tokio-tungstenite = "0.23.1"
+rustls = { version = "0.23.10", features = ["ring", "std"] }
+tokio-rustls = "0.26.0"
+webrtc = "0.11.0"
+
+# System Monitoring & Automation
+sysinfo = "0.30.12"
+enigo = { version = "0.1.3", default-features = false } # Window support, keep basic to prevent UI loop hooks
+windows = { version = "0.57.0", features = ["Win32_UI_Input_KeyboardAndMouse", "Win32_Graphics_Gdi", "Win32_Graphics_Dxgi", "Win32_Graphics_Direct3D11", "Win32_System_Threading", "Win32_System_Com", "Win32_Media_Speech", "Win32_System_Power", "Win32_UI_WindowsAndMessaging"] }
+
+# Utilities
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.118"
+uuid = { version = "1.8.0", features = ["v4", "serde"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+reqwest = { version = "0.12.5", features = ["json", "stream"] }
+futures-util = "0.3.30"
+log = "0.4.22"
+env_logger = "0.11.3"
+base64 = "0.22.1"
+jpeg-encoder = "0.6.0"
